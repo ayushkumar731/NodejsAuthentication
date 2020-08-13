@@ -9,20 +9,23 @@ const db = require('./config/mongoose');
 
 app.use(express.urlencoded());
 
-//use express router
-app.use('/', require('./routes'));
-
-
-
 app.use(cookieParser());
 
-
 app.use(express.static('./assets'));
+
 app.use(expressLayouts);
+
+//extract style and scripts from sub page of the layout
+app.set('layout extractStyles',true);
 
 //setup view engine
 app.set('view engine', 'ejs');
 app.set('views', './views');
+
+//use express router
+app.use('/', require('./routes'));
+
+
 
 app.listen(port, (err, res) => {
   if (err) {
