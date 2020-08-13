@@ -1,0 +1,22 @@
+{
+  "name": "nodejsaunthentication",
+  "version": "1.0.0",
+  "description": "NodeJs Authentication",
+  "main": "index.js",
+  "scripts": {
+    "test": "NodeJs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ayushkumar731/NodejsAuthentication.git"
+  },
+  "keywords": [
+    "Authentication"
+  ],
+  "author": "Ayush Kumar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ayushkumar731/NodejsAuthentication/issues"
+  },
+  "homepage": "https://github.com/ayushkumar731/NodejsAuthentication#readme"
+}
