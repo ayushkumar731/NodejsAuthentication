@@ -4,6 +4,7 @@
   "description": "NodeJs Authentication",
   "main": "index.js",
   "scripts": {
+    "start": "nodemon index.js",
     "test": "NodeJs"
   },
   "repository": {
@@ -18,5 +19,10 @@
   "bugs": {
     "url": "https://github.com/ayushkumar731/NodejsAuthentication/issues"
   },
-  "homepage": "https://github.com/ayushkumar731/NodejsAuthentication#readme"
+  "homepage": "https://github.com/ayushkumar731/NodejsAuthentication#readme",
+  "dependencies": {
+    "ejs": "^3.1.3",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.28"
+  }
 }
