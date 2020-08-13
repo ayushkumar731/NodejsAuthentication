@@ -1,14 +1,24 @@
 const express = require('express');
+const expressLayouts = require('express-ejs-layouts');
+const cookieParser = require('cookie-parser');
 const port = 80;
 const path = require('path');
-const db = require('./config/mongoose');
+
 const app = express();
-const User = require('./models/user');
+const db = require('./config/mongoose');
+
+app.use(express.urlencoded());
 
 //use express router
 app.use('/', require('./routes'));
 
-app.use(express.urlencoded());
+
+
+app.use(cookieParser());
+
+
+app.use(express.static('./assets'));
+app.use(expressLayouts);
 
 //setup view engine
 app.set('view engine', 'ejs');
