@@ -1,6 +1,7 @@
 const User = require('../models/user');
 const bcrypt = require('bcrypt');
 const passport = require('passport');
+const mongoose = require('mongoose');
 module.exports.profile = function (req, res) {
   return res.render('profile', {
     title: 'profile page',
@@ -72,6 +73,21 @@ module.exports.create = function (req, res) {
   });
 };
 
+module.exports.update = function (req, res) {
+  bcrypt.hash(req.body.password, 11, function (err, hash) {
+    console.log(req.body.password);
+    console.log(req.params.id);
+    console.log(hash);
+    mongoose.set('useNewUrlParser', true);
+    mongoose.set('useFindAndModify', false);
+    mongoose.set('useCreateIndex', true);
+    mongoose.set('useUnifiedTopology', true);
+    User.findByIdAndUpdate(req.params.id, hash, function (err, user) {
+      console.log(user);
+      return res.redirect('back');
+    });
+  });
+};
 //sign in and create a session for a user
 module.exports.createSession = function (req, res) {
   return res.redirect('/users/profile');

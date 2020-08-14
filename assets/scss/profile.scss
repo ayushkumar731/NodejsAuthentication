@@ -1,0 +1,51 @@
+.invisible {
+  display: none;
+}
+.visible {
+  display: block;
+}
+.grp {
+  margin: 1rem;
+  font-size: 2rem;
+}
+#reset {
+  display: flex;
+  margin-left: 2rem;
+  #enclose {
+    display: flex;
+    p {
+      font-size: 2rem;
+    }
+    #btn {
+      padding: 3px;
+      background-color: lightseagreen;
+      color: white;
+      cursor: pointer;
+      width: 5rem;
+      border-radius: 5px;
+      text-align: center;
+      font-size: 1.3rem;
+      margin: 0 1.5rem;
+    }
+  }
+  #form {
+    input[type='password'] {
+      border: none;
+      outline: none;
+      border-bottom: 1px solid blue;
+      padding: 5px;
+      font-size: 1.2rem;
+    }
+    input[type='submit'] {
+      padding: 5px;
+      width: 8rem;
+      text-align: center;
+      font-size: 1.2rem;
+      border-radius: 8px;
+      background-color: lightseagreen;
+      color: white;
+      border: none;
+      outline: none;
+    }
+  }
+}
