@@ -1,6 +1,6 @@
 const User = require('../models/user');
 const bcrypt = require('bcrypt');
-
+const passport = require('passport');
 module.exports.profile = function (req, res) {
   return res.render('profile', {
     title: 'profile page',
@@ -34,16 +34,16 @@ module.exports.signIn = function (req, res) {
 module.exports.create = function (req, res) {
   if (req.body.password != req.body.confirm_password) {
     return res.render('signup', {
-      err: 'Both password must be same',
       title: 'SignUp Page',
+      err: 'Password and Confirm password Should be match',
     });
   }
 
   const password = req.body.password;
   if (!validatePassword(password)) {
     return res.render('signup', {
-      err: 'Password must be valid ',
       title: 'SignUp Page',
+      err: 'Password must be valid ',
     });
   }
 

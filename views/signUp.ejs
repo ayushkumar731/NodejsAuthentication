@@ -1,29 +1,45 @@
+<link rel="stylesheet" href="/css/sign.css" />
 <main>
-  <div id="form">
-    <form action="/users/create" method="POST">
-      <div class="form-grp">
-        <%if((typeof err)!="undefined") {%>
-        <h3 style="color: red;"><%=err%></h3>
-        <%}%>
-        <input type="text" name="name" placeholder="Enter Your Name" required />
+  <div id="container">
+    <div id="left-container">
+      <div>
+        <a href="/"><img src="/images/logo1.png" /></a>
       </div>
-      <div class="form-grp">
-        <input type="email" name="email" placeholder="Enter Your Email" required />
+      <p id="heading">Welcome !</p>
+    </div>
+    <div id="right-container">
+      <div id="form">
+        <form action="/users/create" method="POST" id="form">
+          <%if((typeof err)!="undefined") {%>
+          <h3 style="color: red;"><%=err%></h3>
+          <%}%>
+          <div class="form-grp">
+            <input type="text" name="name" placeholder="Enter Your Name" required />
+          </div>
+          <div class="form-grp">
+            <input type="email" name="email" placeholder="Enter Your Email" required />
+          </div>
+          <div class="form-grp">
+            <input type="password" name="password" placeholder="Enter Your Password" required />
+          </div>
+          <div class="form-grp">
+            <input
+              type="password"
+              name="confirm_password"
+              placeholder="Re-Enter Password"
+              required
+            />
+          </div>
+          <div class="form-grp">
+            <input type="submit" value="SIGN UP" />
+          </div>
+        </form>
+        <div id="social-login">sdsd h</div>
       </div>
-      <div class="form-grp">
-        <input type="password" name="password" placeholder="Enter Your Password" required />
+      <div id="sign">
+        <p id="heading">If Allready Account ?</p>
+        <div id="sign-btn"><a href="/users/sign-in">SIGN IN</a></div>
       </div>
-      <div class="form-grp">
-        <input
-          type="password"
-          name="confirm_password"
-          placeholder="Enter Your Confirm Password"
-          required
-        />
-      </div>
-      <div class="form-grp">
-        <input type="submit" value="SIGN UP" />
-      </div>
-    </form>
+    </div>
   </div>
 </main>

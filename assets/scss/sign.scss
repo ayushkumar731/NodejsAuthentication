@@ -1,0 +1,89 @@
+body {
+  background-color: black;
+  #container {
+    width: 70%;
+    display: flex;
+    margin: 7rem auto;
+    justify-content: space-around;
+    padding: 5px;
+    #left-container {
+      width: 35%;
+      background-color: #082736;
+      padding: 5px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      #heading {
+        font-size: 3rem;
+        font-family: cursive;
+        margin: 1rem 0;
+        color: white;
+      }
+    }
+    #right-container {
+      width: 65%;
+      background-color: white;
+      padding: 5px;
+      display: flex;
+      justify-content: space-around;
+
+      #form {
+        width: 60%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        form {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          .form-grp input {
+            border: none;
+            border-bottom: 1px solid blue;
+            outline: none;
+            width: 17rem;
+            margin: 1.5rem 0;
+            font-size: 1.2rem;
+          }
+          input[type='submit'] {
+            width: 8rem;
+            padding: 5px;
+            background-color: lightseagreen;
+            text-align: center;
+            margin: 1rem auto;
+            border-radius: 8px;
+            font-size: 1.2rem;
+            color: white;
+            cursor: pointer;
+          }
+        }
+      }
+      #sign {
+        border-left: 1px solid blue;
+        width: 35%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        #heading {
+          font-size: 1.2rem;
+          width: 11rem;
+        }
+        #sign-btn {
+          width: 8rem;
+          padding: 5px;
+          background-color: lightseagreen;
+          text-align: center;
+          margin-top: 1rem;
+          border-radius: 8px;
+          a {
+            text-decoration: none;
+            font-size: 1.2rem;
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}

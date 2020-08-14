@@ -18,7 +18,7 @@ passport.use(
           return done(err);
         }
         if (!user) {
-          return done(null, false, { message: 'Invalid Username/Password' });
+          return done(null, false, { message: 'Incorrect username.' });
         }
         bcrypt.compare(password, user.password, function (err, result) {
           if (!result) {
