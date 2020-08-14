@@ -43,5 +43,23 @@ passport.use(new LocalStrategy({
         });
     });
 
+      //check if the user is auntheticated
+  passport.checkAuthentication=function(req,res,next){
+    //if the user is signed in then pass on the request tothe next unction(controller's action)
+    if(req.isAuthenticated()){
+      return next();
+    }
+    //if the user is not signed in
+    return res.redirect('/users/sign-in');
+  }
+
+  passport.setAunthenticatedUser=function(req,res,next){
+    if(req.isAuthenticated()){
+      //req.user contains the current signed in user from the session cookie and we are just sending tothe locals for the views
+      res.locals.user=req.user;
+    }
+     next();
+  }
+  
     module.exports=passport;
   
