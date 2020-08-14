@@ -1,13 +1,14 @@
 const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
 const User = require('../models/user');
+const bcrypt = require('bcrypt');
 
 // authentication using passport
 passport.use(
   new LocalStrategy(
     {
       usernameField: 'email',
-      //   passReqToCallback:true
+      passwordField: 'password',
     },
     function (email, password, done) {
       //find user and establish the identity
@@ -16,12 +17,16 @@ passport.use(
           console.log('error in finding the iser== parssport');
           return done(err);
         }
-        if (!user || user.password != password) {
-          console.log('error', 'Invalid Username/Password');
-          return done(null, false);
+        if (!user) {
+          return done(null, false, { message: 'Invalid Username/Password' });
         }
+        bcrypt.compare(password, user.password, function (err, result) {
+          if (!result) {
+            return done(null, false, { message: 'Incorrect password.' });
+          }
 
-        return done(null, user);
+          return done(null, user);
+        });
       });
     }
   )

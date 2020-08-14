@@ -1,8 +1,7 @@
+<link rel="stylesheet" href="/css/header.css" />
 <header>
-  <ul>
-    <% if(locals.user){%>
-    <li><%=user.name%></li>
-    <li><a href="/users/sign-out">Sign Out</a></li>
-    <%}%>
-  </ul>
+  <div><img src="/images/logo.png" /></div>
+  <% if(locals.user){%>
+  <div id="sign-out"><a href="/users/sign-out">Sign Out</a></div>
+  <%}%>
 </header>
