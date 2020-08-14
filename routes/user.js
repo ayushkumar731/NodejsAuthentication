@@ -12,7 +12,10 @@ router.post('/create', userController.create);
 router.post('/update/:id', passport.checkAuthentication, userController.update);
 router.post(
   '/create-session',
-  passport.authenticate('local', { failureRedirect: '/users/sign-in' }),
+  passport.authenticate('local', {
+    failureRedirect: '/users/sign-in',
+    failureFlash: 'Invalid username or password.',
+  }),
   userController.createSession
 );
 
