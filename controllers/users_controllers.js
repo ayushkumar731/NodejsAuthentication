@@ -1,5 +1,12 @@
 const User=require('../models/user');
 
+module.exports.profile=function(req,res){
+  return res.render('profile',{
+    title:'profile page'
+  });
+}
+
+
 module.exports.signUp = function (req, res) {
   return res.render('signUp', {
     title: 'SignUp Page',
@@ -25,10 +32,12 @@ module.exports.create=function (req,res){
     }
     if(!user){
       User.create(req.body,function(err,user){
-      console.log('error in creating user while sign up');
-      });
-
-      return res.redirect('/users/sign-in');
+        if(err){
+          console.log('error in creating user while sign up');
+          return;
+        }
+        return res.redirect('/users/sign-in');
+      });      
     }else{
       return res.redirect('back');
     }
@@ -38,5 +47,5 @@ module.exports.create=function (req,res){
 
 //sign in and create a session for a user
 module.exports.createSession=function (req,res){
-  //to do later
+  return res.redirect('/users/profile');
 }
