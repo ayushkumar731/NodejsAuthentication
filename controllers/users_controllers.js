@@ -76,9 +76,7 @@ module.exports.create = function (req, res) {
 module.exports.update = function (req, res) {
   bcrypt.hash(req.body.password, 11, function (err, hash) {
     mongoose.set('useFindAndModify', false);
-    User.findByIdAndUpdate(req.params.id, hash, function (err, user) {
-      user.password = hash;
-      user.save();
+    User.findByIdAndUpdate(req.user._id, { password: hash }, function (err, user) {
       return res.redirect('back');
     });
   });
