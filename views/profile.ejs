@@ -10,7 +10,9 @@
     </div>
     <div id="form" class="invisible">
       <form method="POST" action="/users/update/<%=user.id%>">
+        <input type="password" name="curr_password" placeholder="Enter Current Password" required />
         <input type="password" name="password" placeholder="Enter New Password" required />
+        <input type="password" name="new_password" placeholder="Re-Enter Password" required />
         <input type="submit" value="UPDATE" />
       </form>
     </div>

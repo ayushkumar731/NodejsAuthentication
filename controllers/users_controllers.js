@@ -9,8 +9,8 @@ module.exports.profile = function (req, res) {
 };
 
 function validatePassword(password) {
-  const re = /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@$!%*?&])([a-zA-Z0-9@$!%*?&]{8,})$/;
-  return re.test(password);
+  const pattern = /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@$!%*?&])([a-zA-Z0-9@$!%*?&]{8,})$/;
+  return pattern.test(password);
 }
 
 module.exports.signUp = function (req, res) {
@@ -74,11 +74,28 @@ module.exports.create = function (req, res) {
 };
 
 module.exports.update = function (req, res) {
-  bcrypt.hash(req.body.password, 11, function (err, hash) {
-    mongoose.set('useFindAndModify', false);
-    User.findByIdAndUpdate(req.user._id, { password: hash }, function (err, user) {
+  bcrypt.compare(req.body.curr_password, req.user.password, function (err, result) {
+    if (!result) {
+      req.flash('error', 'current password is wrong');
       return res.redirect('back');
-    });
+    } else {
+      if (req.body.password != req.body.new_password) {
+        req.flash('error', 'new password and confirm password must be same !');
+        return res.redirect('back');
+      }
+
+      const password = req.body.password;
+      if (!validatePassword(password)) {
+        return res.redirect('back');
+      }
+      bcrypt.hash(req.body.password, 11, function (err, hash) {
+        mongoose.set('useFindAndModify', false);
+        User.findByIdAndUpdate(req.user._id, { password: hash }, function (err, user) {
+          req.flash('success', 'Password Successfully Changed');
+          return res.redirect('back');
+        });
+      });
+    }
   });
 };
 
