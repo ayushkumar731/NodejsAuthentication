@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-mongoose.connect('mongodb+srv://skayush:Ayush@123@cluster0.rcyls.mongodb.net/Authentication?retryWrites=true&w=majority', { useNewUrlParser: true });
+mongoose.connect('mongodb://localhost/nodeJsAuth', { useNewUrlParser: true });
 
 //We have a pending connection to the test database running on localhost. We now need to get notified if we connect successfully or if a connection error occurs:
 const db = mongoose.connection;
