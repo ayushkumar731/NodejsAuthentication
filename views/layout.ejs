@@ -1,3 +1,4 @@
+<!-- create layout and all page look like this -->
 <html>
   <head>
     <title><%=title%></title>
@@ -13,9 +14,15 @@
     <%- style%>
   </head>
   <body>
-    <%-body%> <%- script%>
+    <!-- insert body in the layout -->
+    <%-body%>
 
+    <!-- to add the other page can script and fix it -->
+    <%- script%>
+
+    <!-- this script for the noty -->
     <script>
+      // to set for the success notification
       <% if(flash.success && flash.success.length>0){%>
           new Noty({
               theme:'relax',
@@ -26,6 +33,7 @@
           }).show();
       <%}%>
 
+      // to set for the error notification
       <% if(flash.error && flash.error.length>0){%>
           new Noty({
               theme:'relax',

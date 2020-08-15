@@ -1,13 +1,18 @@
 <link rel="stylesheet" href="/css/profile.css" />
+<!-- include header -->
 <%- include('_header'); %>
 <main>
+  <!-- display the name and email for current user -->
   <p class="grp">Name: <%=user.name%></p>
   <p class="grp">Email: <%=user.email%></p>
+
+  <!-- container for the reset password -->
   <div id="reset">
     <div id="enclose">
       <p>Reset Password</p>
       <div id="btn">Edit</div>
     </div>
+    <!-- form method to fill for the password -->
     <div id="form" class="invisible">
       <form method="POST" action="/users/update/<%=user.id%>">
         <input type="password" name="curr_password" placeholder="Enter Current Password" required />
@@ -18,6 +23,8 @@
     </div>
   </div>
 </main>
+
+<!-- js use for the edit btn to display the form-->
 <script>
   document.getElementById('btn').addEventListener('click', function () {
     document.getElementById('form').classList.toggle('visible');

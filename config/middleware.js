@@ -1,3 +1,4 @@
+//to set the middle ware for the flash notification
 module.exports.setFlash = function (req, res, next) {
   res.locals.flash = {
     success: req.flash('success'),

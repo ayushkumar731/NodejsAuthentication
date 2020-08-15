@@ -28,8 +28,10 @@ app.use(
 app.use(express.urlencoded());
 app.use(cookieParser());
 
+//to use the assets folder
 app.use(express.static('./assets'));
 
+//to use the indivisual layouts
 app.use(expressLayouts);
 
 //extract style and scripts from sub page of the layout
@@ -69,6 +71,7 @@ app.use(passport.session());
 
 app.use(passport.setAunthenticatedUser);
 
+//for flash noto
 app.use(flash());
 app.use(customMiddleWare.setFlash);
 

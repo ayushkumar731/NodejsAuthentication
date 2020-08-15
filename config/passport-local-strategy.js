@@ -17,14 +17,17 @@ passport.use(
           console.log('error in finding the iser== parssport');
           return done(err);
         }
+        //if user is not found then show invalid message
         if (!user) {
           return done(null, false, { message: 'Incorrect username.' });
         }
+        //decrypt the password and match the result
         bcrypt.compare(password, user.password, function (err, result) {
+          //if not match then show invalid message
           if (!result) {
             return done(null, false, { message: 'Incorrect password.' });
           }
-
+          //if everything fine then send the data
           return done(null, user);
         });
       });

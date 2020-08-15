@@ -1,55 +1,82 @@
 body {
-  background-color: #151515; }
+  background-color: #151515;
+}
 
+/* style the container */
 #container {
   width: 80%;
   margin: 4% auto;
   display: flex;
   height: 80vh;
-  justify-content: space-between; }
-  #container #left-container {
-    width: 30%;
-    background-color: darkgreen;
-    border: 1px solid green;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center; }
-    #container #left-container #heading {
-      font-size: 3rem;
-      color: darkorange;
-      margin-bottom: 2rem; }
-    #container #left-container #sign-in-btn {
-      width: 10rem;
-      padding: 7px;
-      border-radius: 10px;
-      background-color: lightseagreen;
-      margin-bottom: 2rem;
-      text-align: center; }
-      #container #left-container #sign-in-btn a {
-        text-decoration: none;
-        color: white;
-        font-size: 1.2rem; }
-    #container #left-container #sign-up-btn {
-      width: 10rem;
-      padding: 7px;
-      border-radius: 10px;
-      background-color: lightseagreen;
-      text-align: center; }
-      #container #left-container #sign-up-btn a {
-        text-decoration: none;
-        color: white;
-        font-size: 1.2rem; }
-  #container #right-container {
-    width: 70%;
-    background-image: url("../images/back.jpg");
-    background-size: cover;
-    background-size: cover;
-    background-repeat: no-repeat; }
-    #container #right-container #intro {
-      color: lightgreen;
-      width: 15rem;
-      font-size: 2rem;
-      text-align: center;
-      margin: 4rem auto;
-      line-height: 3rem; }
+  justify-content: space-between;
+}
+
+/* style left portion of container */
+#container #left-container {
+  width: 30%;
+  background-color: darkgreen;
+  border: 1px solid green;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* style left container heading */
+#container #left-container #heading {
+  font-size: 3rem;
+  color: darkorange;
+  margin-bottom: 2rem;
+}
+
+/* style sign in btn */
+#container #left-container #sign-in-btn {
+  width: 10rem;
+  padding: 7px;
+  border-radius: 10px;
+  background-color: lightseagreen;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* style sign in btn anchor*/
+#container #left-container #sign-in-btn a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+}
+
+/* style sign up btn */
+#container #left-container #sign-up-btn {
+  width: 10rem;
+  padding: 7px;
+  border-radius: 10px;
+  background-color: lightseagreen;
+  text-align: center;
+}
+
+/* style sign up btn anchor*/
+#container #left-container #sign-up-btn a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+}
+
+/* style right portion of container */
+#container #right-container {
+  width: 70%;
+  background-image: url('../images/back.jpg');
+  background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* style right portion of container heading */
+#container #right-container #intro {
+  color: lightgreen;
+  width: 15rem;
+  font-size: 2rem;
+  text-align: center;
+  margin: 4rem auto;
+  line-height: 3rem;
+}
