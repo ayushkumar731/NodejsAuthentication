@@ -58,6 +58,19 @@ body {
             cursor: pointer;
           }
         }
+        #social-login {
+          margin: 1rem 0;
+          padding: 10px;
+          background-color: #082736;
+          a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.3rem;
+            i {
+              margin: 0 0.3rem;
+            }
+          }
+        }
       }
       #sign {
         border-left: 1px solid blue;
