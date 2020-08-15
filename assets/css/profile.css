@@ -1,64 +1,43 @@
-/* initial form not visible */
 .invisible {
-  display: none;
-}
+  display: none; }
 
-/* when toggle then class add in the edin btn to display the form */
 .visible {
-  display: block;
-}
+  display: block; }
 
-/* to design the form grop */
 .grp {
   margin: 1rem;
-  font-size: 2rem;
-}
+  font-size: 2rem; }
 
-/* style reset container */
 #reset {
   display: flex;
-  margin-left: 2rem;
-}
-
-#reset #enclose {
-  display: flex;
-}
-
-#reset #enclose p {
-  font-size: 2rem;
-}
-
-/* style edit btn */
-#reset #enclose #btn {
-  padding: 3px;
-  background-color: lightseagreen;
-  color: white;
-  cursor: pointer;
-  width: 5rem;
-  border-radius: 5px;
-  text-align: center;
-  font-size: 1.3rem;
-  margin: 0 1.5rem;
-}
-
-/* style form password */
-#reset #form input[type='password'] {
-  border: none;
-  outline: none;
-  border-bottom: 1px solid blue;
-  padding: 5px;
-  font-size: 1.2rem;
-}
-
-/* style submit btn */
-#reset #form input[type='submit'] {
-  padding: 5px;
-  width: 8rem;
-  text-align: center;
-  font-size: 1.2rem;
-  border-radius: 8px;
-  background-color: lightseagreen;
-  color: white;
-  border: none;
-  outline: none;
-}
+  margin-left: 2rem; }
+  #reset #enclose {
+    display: flex; }
+    #reset #enclose p {
+      font-size: 2rem; }
+    #reset #enclose #btn {
+      padding: 3px;
+      background-color: lightseagreen;
+      color: white;
+      cursor: pointer;
+      width: 5rem;
+      border-radius: 5px;
+      text-align: center;
+      font-size: 1.3rem;
+      margin: 0 1.5rem; }
+  #reset #form input[type='password'] {
+    border: none;
+    outline: none;
+    border-bottom: 1px solid blue;
+    padding: 5px;
+    font-size: 1.2rem; }
+  #reset #form input[type='submit'] {
+    padding: 5px;
+    width: 8rem;
+    text-align: center;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    background-color: lightseagreen;
+    color: white;
+    border: none;
+    outline: none; }

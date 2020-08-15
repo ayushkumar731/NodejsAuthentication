@@ -1,23 +1,15 @@
-/* style header part */
 header {
   background-color: black;
   padding: 5px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-}
-
-/* style signout btn */
-header #sign-out {
-  padding: 8px;
-  margin-right: 1rem;
-  background-color: darkblue;
-}
-
-/* style signout anchor tag */
-header #sign-out a {
-  text-decoration: none;
-  font-family: monospace;
-  color: white;
-  font-size: 1.2rem;
-}
+  align-items: center; }
+  header #sign-out {
+    padding: 8px;
+    margin-right: 1rem;
+    background-color: darkblue; }
+    header #sign-out a {
+      text-decoration: none;
+      font-family: monospace;
+      color: white;
+      font-size: 1.2rem; }

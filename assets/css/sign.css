@@ -1,130 +1,85 @@
-/* common styling for sign in and sign up btn */
 body {
-  background-color: black;
-}
-
-/* style main container */
-body #container {
-  width: 70%;
-  display: flex;
-  margin: 7rem auto;
-  justify-content: space-around;
-  padding: 5px;
-}
-
-/* style left container */
-body #container #left-container {
-  width: 35%;
-  background-color: #082736;
-  padding: 5px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/* style left container heading */
-body #container #left-container #heading {
-  font-size: 3rem;
-  font-family: cursive;
-  margin: 1rem 0;
-  color: white;
-}
-
-/* style right container */
-body #container #right-container {
-  width: 65%;
-  background-color: white;
-  padding: 5px;
-  display: flex;
-  justify-content: space-around;
-}
-
-/* style  form container*/
-body #container #right-container #form {
-  width: 60%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-/* style the form section */
-body #container #right-container #form form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-/* style form grp input */
-body #container #right-container #form form .form-grp input {
-  border: none;
-  border-bottom: 1px solid blue;
-  outline: none;
-  width: 17rem;
-  margin: 1.5rem 0;
-  font-size: 1.2rem;
-}
-
-/* style submit btn */
-body #container #right-container #form form input[type='submit'] {
-  width: 8rem;
-  padding: 5px;
-  background-color: lightseagreen;
-  text-align: center;
-  margin: 1rem auto;
-  border-radius: 8px;
-  font-size: 1.2rem;
-  color: white;
-  cursor: pointer;
-}
-
-/* style social login container*/
-body #container #right-container #form #social-login {
-  margin: 1rem 0;
-  padding: 10px;
-  background-color: #082736;
-}
-
-/* style social login anchor*/
-body #container #right-container #form #social-login a {
-  text-decoration: none;
-  color: white;
-  font-size: 1.3rem;
-}
-
-/* style social login google icon*/
-body #container #right-container #form #social-login a i {
-  margin: 0 0.3rem;
-}
-
-/* style social login container*/
-body #container #right-container #sign {
-  border-left: 1px solid blue;
-  width: 35%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-body #container #right-container #sign #heading {
-  font-size: 1.2rem;
-  width: 11rem;
-}
-
-/* style sign-in  btn*/
-body #container #right-container #sign #sign-btn {
-  width: 8rem;
-  padding: 5px;
-  background-color: lightseagreen;
-  text-align: center;
-  margin-top: 1rem;
-  border-radius: 8px;
-}
-
-/* style sign-in  btn anchor*/
-body #container #right-container #sign #sign-btn a {
-  text-decoration: none;
-  font-size: 1.2rem;
-  color: white;
-}
+  background-color: black; }
+  body #container {
+    width: 70%;
+    display: flex;
+    margin: 7rem auto;
+    justify-content: space-around;
+    padding: 5px; }
+    body #container #left-container {
+      width: 35%;
+      background-color: #082736;
+      padding: 5px;
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+      body #container #left-container #heading {
+        font-size: 3rem;
+        font-family: cursive;
+        margin: 1rem 0;
+        color: white; }
+    body #container #right-container {
+      width: 65%;
+      background-color: white;
+      padding: 5px;
+      display: flex;
+      justify-content: space-around; }
+      body #container #right-container #form {
+        width: 60%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column; }
+        body #container #right-container #form form {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center; }
+          body #container #right-container #form form .form-grp input {
+            border: none;
+            border-bottom: 1px solid blue;
+            outline: none;
+            width: 17rem;
+            margin: 1.5rem 0;
+            font-size: 1.2rem; }
+          body #container #right-container #form form input[type='submit'] {
+            width: 8rem;
+            padding: 5px;
+            background-color: lightseagreen;
+            text-align: center;
+            margin: 1rem auto;
+            border-radius: 8px;
+            font-size: 1.2rem;
+            color: white;
+            cursor: pointer; }
+        body #container #right-container #form #social-login {
+          margin: 1rem 0;
+          padding: 10px;
+          background-color: #082736; }
+          body #container #right-container #form #social-login a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.3rem; }
+            body #container #right-container #form #social-login a i {
+              margin: 0 0.3rem; }
+      body #container #right-container #sign {
+        border-left: 1px solid blue;
+        width: 35%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; }
+        body #container #right-container #sign #heading {
+          font-size: 1.2rem;
+          width: 11rem; }
+        body #container #right-container #sign #sign-btn {
+          width: 8rem;
+          padding: 5px;
+          background-color: lightseagreen;
+          text-align: center;
+          margin-top: 1rem;
+          border-radius: 8px; }
+          body #container #right-container #sign #sign-btn a {
+            text-decoration: none;
+            font-size: 1.2rem;
+            color: white; }
