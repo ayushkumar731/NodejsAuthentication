@@ -51,7 +51,7 @@ module.exports.signIn = function (req, res) {
 module.exports.create = function (req, res) {
   //if password and confirm password not matched then render the sign-up page
   if (req.body.password != req.body.confirm_password) {
-    return res.render('signup', {
+    return res.render('signUp', {
       title: 'SignUp Page',
       err: 'Password and Confirm password Should be match',
     });
@@ -61,7 +61,7 @@ module.exports.create = function (req, res) {
   const password = req.body.password;
   if (!validatePassword(password)) {
     //if not valid then render the signup page and diplay the error
-    return res.render('signup', {
+    return res.render('signUp', {
       title: 'SignUp Page',
       err: 'Password must be valid ',
     });
@@ -88,7 +88,7 @@ module.exports.create = function (req, res) {
       return res.redirect('/users/sign-in');
     } else {
       //if user is found in database then render the sign up page with display the error
-      return res.render('./signup', {
+      return res.render('signUp', {
         err: 'User Already Exists',
         title: 'SignUp Page',
       });
